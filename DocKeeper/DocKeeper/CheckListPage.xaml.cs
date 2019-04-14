@@ -207,8 +207,6 @@ namespace DocKeeper
                 {
                     LastViewedCheckList.Documents.Remove(e.Item as Document);
                 }
-                return;
-
 
                 // Deselect item
                 (sender as ListView).SelectedItem = null;
