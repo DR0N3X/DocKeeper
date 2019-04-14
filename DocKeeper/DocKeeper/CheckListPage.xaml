@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DocKeeper.CheckListPage"
+             Title="Checklists">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="MyListView"
+              IsPullToRefreshEnabled="False"
+              Grid.Row="2"
+              ItemTapped="Handle_ItemTapped"
+              Margin="0"
+              SelectionMode="Single">
+                <ListView.Header>
+                    <Grid BackgroundColor="#3700B3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="10"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="1"
+                               Grid.Row="2"
+                               x:Name="MyListTitle"
+                               Text="DocKeeper"
+                               TextColor="White"
+                               Style="{ DynamicResource ListViewTitleText }"/>
+                        <Button x:Name="AddToolbarItem"
+                                BackgroundColor="Transparent"
+                                Grid.Column="2"
+                                Grid.Row="2"
+                                HorizontalOptions="End"
+                                VerticalOptions="Start"
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Margin="0,0,20,0"
+                                Image="@drawable/WhiteBox_Add.png"
+                                Clicked="AddButton_Clicked">
+                        </Button>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{ Binding Name }" 
+                           Style="{ DynamicResource ListItemTextStyle }"
+                           Margin="10"
+                           TextColor="Black"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

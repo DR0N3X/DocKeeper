@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DocKeeper.EditPersonDialogue"
+             Title="Edit"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1"
+                   HorizontalOptions="StartAndExpand"
+                   Text="Name:"
+                   Margin="20,0,0,0"
+                   />
+            <Entry Grid.Row="2"
+                   x:Name="NameEntryField"
+                   TextColor="Black"
+                   FontSize="Large"
+                   WidthRequest="340"
+                   HeightRequest="60"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="EndAndExpand"
+                   Margin="20,10,10,10"/>
+            <Button Grid.Row="3"
+                    TextColor="White"
+                    HorizontalOptions="StartAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    Text="Cancel"
+                    Clicked="Cancel_Button_Clicked"
+                    Margin="20"
+                    BackgroundColor="#6200EE"
+                    />
+            <Button Grid.Row="3"
+                    TextColor="White"
+                    HorizontalOptions="EndAndExpand"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    Text="Edit"
+                    Clicked="Edit_Button_Clicked"
+                    Margin="20"
+                    BackgroundColor="#6200EE"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
